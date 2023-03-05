@@ -4,7 +4,7 @@
 ![Pypi Version](https://img.shields.io/pypi/v/edanif.svg)
 ![Code convention](https://img.shields.io/badge/code%20convention-pep8-black)
 
-Tool for Exploratory Data Analysis of Neuroimaging Informatics Technology Initiative(NIfTI) format <br>
+Tool for *Exploratory Data Analysis of Neuroimaging Informatics Technology Initiative(NIfTI) format* <br>
 `EDA-NIf` creates a dataframe containing meta information of NIfTi file format and provides several useful functions.
 
 <br>
