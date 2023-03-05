@@ -1,12 +1,5 @@
-import argparse
-import pandas as pd
-import glob
-import os
 import nibabel as nib 
-import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-from io import StringIO
 
 
 def count_center_voxel_labels(self, nifti_path: str, x_val: int, y_val: int, z_val):
