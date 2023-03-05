@@ -30,17 +30,15 @@ def get_df_edanif(nifti_folder_path: list, include_word: str, save_path: str, is
         abnormal_quadrant_count = img_flatten_array[(img_flatten_array != 0) & (img_flatten_array != 1)] 
         file_name = nifti_path.split('\\')[-1].rstrip('.nii.gz')
         hdr = img.header
-        # hdr_info = save_print_instance(hdr)
         raw = hdr.structarr		
+
         temp_dict['filePath'] = nifti_path
         temp_dict['volumeOfVoxel'] = f'{volume_unit}mm3'
         temp_dict['spacing'] = f'{sx}mm x {sy}mm x {sz}mm'
         temp_dict['imgAffineMetrix'] = np.round(img.affine)
-        # temp_dict['img_affine_metrix(raw value)'] = img.affine
         temp_dict['fileName'] = file_name
         temp_dict['data_dtype'] = img.get_data_dtype()
         temp_dict['niftiImgShape'] = img.shape
-        # temp_dict['hdr_info'] = hdr_info.strip("<class 'nibabel.nifti1.Nifti1Header'> object, ")
         temp_dict['XYZTunits'] = hdr.get_xyzt_units()
         temp_dict['hdrRaw'] = raw
         temp_dict['3dArrayMean'] = img_array.mean()
@@ -48,7 +46,10 @@ def get_df_edanif(nifti_folder_path: list, include_word: str, save_path: str, is
         temp_dict['3dArrayMin'] = img_array.min()
         temp_dict['3dArrayMax'] = img_array.min()
         temp_dict['isUniqueValues'] = np.unique(img_flatten_array, return_counts=True)[0]
-        
+        # hdr_info = save_print_instance(hdr)
+        # temp_dict['img_affine_metrix(raw value)'] = img.affine
+        # temp_dict['img_affine_metrix(raw value)'] = img.affine
+        # temp_dict['hdr_info'] = hdr_info.strip("<class 'nibabel.nifti1.Nifti1Header'> object, ")
         if is_binary: 
             temp_dict['exceptionValueCountInBinary'] = abnormal_quadrant_count.size
             temp_dict['(quadrant_count)voxelVolumeEstimation'] = n_count(img_array) * volume_unit
