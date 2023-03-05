@@ -18,8 +18,8 @@ Tool for Exploratory Data Analysis of Neuroimaging Informatics Technology Initia
 # Tutorial
 We provide tutorial notebooks for all the features we offer. We plan to provide additional docstrings or documentation from the official distribution version (major version 1 or higher).
 
-1. Main-tutorials: https://github.com/DSDanielPark/edanif/blob/main/tutorials/edanif_tutorial.ipynb
-2. Sub-tutorial-folder: https://github.com/DSDanielPark/edanif/blob/main/tutorials
+1. Main-tutorials: https://github.com/DSDanielPark/EDA-NIf/tree/main/tutorialsedanif_tutorial.ipynb
+2. Sub-tutorial-folder: https://github.com/DSDanielPark/EDA-NIf/tree/main/tutorials
 
 <br>
 <br>
