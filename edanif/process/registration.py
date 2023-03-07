@@ -1,6 +1,6 @@
 import numpy as np
 import SimpleITK as sitk
-from ipywidgets import interact, fixed
+# from ipywidgets import interact, fixed
 import matplotlib.pyplot as plt
 
 
