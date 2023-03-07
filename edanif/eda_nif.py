@@ -2,8 +2,7 @@ import pandas as pd
 import numpy as np
 import nibabel as nib 
 import tqdm
-from edanif import find_all_files
-
+import edanif
 
 def count_center_voxel_labels(nifti_file_path: str, x_val: int, y_val: int, z_val):
     img = nib.load(nifti_file_path)
@@ -16,7 +15,7 @@ def count_center_voxel_labels(nifti_file_path: str, x_val: int, y_val: int, z_va
 
 
 def meta_df(nifti_folder_path: str, include_word: str, save_path: str, is_binary: bool) -> pd.DataFrame:
-    """If you enter the top-level folder path that contains the nifti files you want to obtain meta data for and keywords (such as 'nii.gz','mask.nii.gz') 
+    """If you enter the top-level folder path that contains the nifti files you want to obtain meta data for and keywords (such as 'nii.gz','mask.n) 
     commonly included in those nifti files, a meta data frame is created.
 
     :param nifti_folder_path: 
@@ -35,7 +34,7 @@ def meta_df(nifti_folder_path: str, include_word: str, save_path: str, is_binary
     """
     total_dict = dict()
     n_count = np.count_nonzero 
-    all_nifti_files = find_all_files(nifti_folder_path, include_word)
+    all_nifti_files = edanif.find_all_files(nifti_folder_path, include_word)
     for i, nifti_path in tqdm(enumerate(all_nifti_files), total=len(all_nifti_files)):
         temp_dict = dict()
         img = nib.load(nifti_path)
