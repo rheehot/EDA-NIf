@@ -28,19 +28,20 @@ Beta versions with official documentation are provided starting from major versi
 # Project tree
 minimal encapsulation, minimal dependencies
 ```
-📦edanif
- ┣ 📂process
- ┃ ┣ 📜preprocess.py
- ┃ ┣ 📜registration.py
- ┃ ┣ 📜resampling.py
- ┃ ┣ 📜trans_morph.py
- ┃ ┗ 📜__init__.py
- ┣ 📂utils
- ┃ ┣ 📜util.py
- ┃ ┗ 📜__init__.py
- ┣ 📜eda_nif.py
- ┣ 📜vis_nif.py
- ┗ 📜__init__.py
+│  eda_nif.py
+│  vis_nif.py
+│  __init__.py
+│
+├─process
+│      preprocess.py
+│      registration.py
+│      resampling.py
+│      trans_morph.py
+│      __init__.py
+│
+└─utils
+        util.py
+        __init__.py
 ```
 
 <br>
