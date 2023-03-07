@@ -45,8 +45,7 @@ If you enter only the top-level folder containing nifti files, you can get a dat
     ```python
     import edanif
 
-    raw_nifti_folder= '../data/raw_nifti'
-    df_raw_nii = edanif.meta_df(raw_nifti_folder, 'nii.gz', 'df_raw_nii_meta.csv', False)
+    df_raw_nii = edanif.meta_df('../data/raw_nifti', 'nii.gz', 'df_raw_nii_meta.csv', False)
     ```
     result dataframe: https://github.com/DSDanielPark/EDA-NIf/blob/main/tutorials/result/df_raw_nii_meta.csv
 
@@ -54,8 +53,7 @@ If you enter only the top-level folder containing nifti files, you can get a dat
     ```python
     import edanif
 
-    mask_nifti_folder= '../data/mask_nifti'
-    df_mask_nii = edanif.meta_df(mask_nifti_folder, 'mask.nii.gz', 'df_mask_nii_meta.csv', True)
+    df_mask_nii = edanif.meta_df('../data/mask_nifti', 'mask.nii.gz', 'df_mask_nii_meta.csv', True)
     ```
     result dataframe: https://github.com/DSDanielPark/EDA-NIf/blob/main/tutorials/result/df_mask_nii_meta.csv
 
