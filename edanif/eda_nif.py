@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import nibabel as nib 
-import tqdm
+from tqdm import tqdm
 import edanif
 
 def count_center_voxel_labels(nifti_file_path: str, x_val: int, y_val: int, z_val):
