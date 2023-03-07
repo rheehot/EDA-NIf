@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import nibabel as nib 
 from edanif.utils.util import find_all_files
+import tqdm
 
 
 def count_center_voxel_labels(nifti_file_path: str, x_val: int, y_val: int, z_val):
@@ -14,11 +15,11 @@ def count_center_voxel_labels(nifti_file_path: str, x_val: int, y_val: int, z_va
     return center_region_quadrant_count_label_count
 
 
-def get_df_edanif(nifti_folder_path: list, include_word: str, save_path: str, is_binary: bool) -> None:
+def meta_df(nifti_folder_path: list, include_word: str, save_path: str, is_binary: bool) -> None:
     total_dict = dict()
     n_count = np.count_nonzero 
     all_nifti_files = find_all_files(nifti_folder_path, include_word)
-    for i, nifti_path in enumerate(all_nifti_files):
+    for i, nifti_path in tqdm(enumerate(all_nifti_files), total=len(all_nifti_files)):
         temp_dict = dict()
         img = nib.load(nifti_path)
         x,y,z = img.shape
