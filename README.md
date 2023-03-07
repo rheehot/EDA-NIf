@@ -22,11 +22,34 @@ We provide tutorial notebooks for all the features we offer. We plan to provide 
 2. Sub-tutorial-folder: https://github.com/DSDanielPark/EDA-NIf/tree/main/tutorials
 
 <br>
+Beta versions with official documentation are provided starting from major version 1.
+<br>
+
+# Project tree
+minimal encapsulation, minimal dependencies
+```
+📦edanif
+ ┣ 📂process
+ ┃ ┣ 📜preprocess.py
+ ┃ ┣ 📜registration.py
+ ┃ ┣ 📜resampling.py
+ ┃ ┣ 📜trans_morph.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📂utils
+ ┃ ┣ 📜util.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📜eda_nif.py
+ ┣ 📜vis_nif.py
+ ┗ 📜__init__.py
+```
+
 <br>
 
 # Main Feature
 
-If you enter only the top-level folder containing nifti files, you can get a data frame for all nifti files. (`edanif.eda_nif.meta_df`)
+`edanif.eda_nif.meta_df`: If you enter only the top-level folder containing nifti files, you can get a data frame for all nifti files.  <br><br>
+
+## Features
 
 1. edanif.eda_nif <br>
   1.1 `count_center_voxel_labels` <br>
@@ -63,7 +86,8 @@ If you enter only the top-level folder containing nifti files, you can get a dat
   7.3 `get_boundary_diff_index`<br>
 
 - Feature development and unit testing are ongoing. We will update it whenever time permits.
-<br>
+
+<br><br>
 
 # References
 [1] NiBabel https://nipy.org/nibabel/
