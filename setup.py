@@ -21,5 +21,5 @@ setuptools.setup(
         "matplotlib",
         "tqdm",
         "SimpleITK",
-        "monai"
+        "monai", "scikit-image", "ipykernel"
     ])
