@@ -13,7 +13,9 @@ Tool for *Exploratory Data Analysis of Neuroimaging Informatics Technology Initi
   ```cmd
   pip install edanif
   ```
-<Br>
+  Beta versions with official documentation are provided starting from major version 1.
+<Br><Br>
+
 
 # Tutorial
 We provide tutorial notebooks for all the features we offer. We plan to provide additional docstrings or documentation from the official distribution version (major version 1 or higher).
@@ -22,33 +24,11 @@ We provide tutorial notebooks for all the features we offer. We plan to provide 
 2. Sub-tutorial-folder: https://github.com/DSDanielPark/EDA-NIf/tree/main/tutorials
 
 <br>
-Beta versions with official documentation are provided starting from major version 1.
-<br>
 
-# Project tree
-minimal encapsulation, minimal dependencies
-```
-│  eda_nif.py
-│  vis_nif.py
-│  __init__.py
-│
-├─process
-│      preprocess.py
-│      registration.py
-│      resampling.py
-│      trans_morph.py
-│      __init__.py
-│
-└─utils
-        util.py
-        __init__.py
-```
-
-<br>
 
 # Main Feature
 
-`edanif.eda_nif.meta_df`: If you enter only the top-level folder containing nifti files, you can get a data frame for all nifti files.  <br><br>
+`edanif.eda_nif.meta_df`: If you enter only the top-level folder containing nifti files, you can get a data frame for all nifti files.  <br>
 
 ## Features
 
@@ -91,7 +71,12 @@ minimal encapsulation, minimal dependencies
 <br><br>
 
 # References
-[1] NiBabel https://nipy.org/nibabel/
+[1] NiBabel https://nipy.org/nibabel/ <br>
+[2] SimpleITK https://simpleitk.org/ <br>
+[3] MONAI https://monai.io/ <Br>
+[4] AntsPy https://github.com/ANTsX/ANTsPy
+
+<br>
 
 
 ### Contacts
