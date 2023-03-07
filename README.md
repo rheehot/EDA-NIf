@@ -28,7 +28,60 @@ We provide tutorial notebooks for all the features we offer. We plan to provide 
 
 # Main Feature
 
-`edanif.eda_nif.meta_df`: If you enter only the top-level folder containing nifti files, you can get a data frame for all nifti files.  <br>
+  <details>
+  <summary> See sample data folder tree... </summary>
+
+The sample data folder is designed with an unnecessary and complex structure to show that all nifti files under the top-level folder path are collected recursively. If you are using the [BIDS format](https://bids.neuroimaging.io/), you only need to insert keywords properly.
+
+Example folder tree
+```
+📦data
+ ┣ 📂mask_nifti
+ ┃ ┗ 📂sample1
+ ┃ ┃ ┣ 📂sample2
+ ┃ ┃ ┃ ┗ 📜sample2_mask.nii.gz
+ ┃ ┃ ┗ 📜sample1_mask.nii.gz
+
+ ┗ 📂raw_nifti
+ ┃ ┣ 📂001
+ ┃ ┃ ┣ 📂adc
+ ┃ ┃ ┃ ┗ 📜sample_adc.gz
+ ┃ ┃ ┗ 📜sample_dwi.nii.gz
+ ┃ ┗ 📂002
+ ┃ ┃ ┣ 📂adc
+ ┃ ┃ ┃ ┣ 📂flair
+ ┃ ┃ ┃ ┃ ┣ 📂sample_dwi
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜sub-strokecase0062_ses-0001_dwi.nii.gz
+ ┃ ┃ ┃ ┃ ┗ 📜sample2_flair.nii.gz
+ ┃ ┃ ┃ ┗ 📜sample2_adc.gz
+ ┃ ┃ ┗ 📜sub-strokecase0062_ses-0001_dwi.nii.gz
+```
+
+</details>
+
+<br>
+
+### `edanif.eda_nif.meta_df`
+If you enter only the top-level folder containing nifti files, you can get a data frame for all nifti files.  <br>
+1. In case of raw nifti files
+    ```python
+    import edanif
+
+    raw_nifti_folder= '../data/raw_nifti'
+    df_raw_nii = edanif.meta_df(raw_nifti_folder, 'nii.gz', 'df_raw_nii_meta.csv', False)
+    ```
+    result dataframe: https://github.com/DSDanielPark/EDA-NIf/blob/main/tutorials/result/df_raw_nii_meta.csv
+
+2. In case of mask nifti files (binary files `only`)
+    ```python
+    import edanif
+
+    mask_nifti_folder= '../data/mask_nifti'
+    df_mask_nii = edanif.meta_df(mask_nifti_folder, 'mask.nii.gz', 'df_mask_nii_meta.csv', True)
+    ```
+    result dataframe: https://github.com/DSDanielPark/EDA-NIf/blob/main/tutorials/result/df_mask_nii_meta.csv
+
+<br><br>
 
 ## Features
 
