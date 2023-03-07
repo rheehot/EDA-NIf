@@ -6,7 +6,7 @@
 
 Tool for *Exploratory Data Analysis of Neuroimaging Informatics Technology Initiative(NIfTI) format* <br>
 `EDA-NIf` creates a dataframe containing meta information of NIfTi file format and provides several useful functions.
-
+![](https://github.com/DSDanielPark/EDA-NIf/blob/main/tutorials/result/eda_nif.gif)
 <br>
 
 # Installation
@@ -34,29 +34,7 @@ We provide tutorial notebooks for all the features we offer. We plan to provide 
 The sample data folder is designed with an unnecessary and complex structure to show that all nifti files under the top-level folder path are collected recursively. If you are using the [BIDS format](https://bids.neuroimaging.io/), you only need to insert keywords properly.
 
 Example folder tree
-```
-📦data
- ┣ 📂mask_nifti
- ┃ ┗ 📂sample1
- ┃ ┃ ┣ 📂sample2
- ┃ ┃ ┃ ┗ 📜sample2_mask.nii.gz
- ┃ ┃ ┗ 📜sample1_mask.nii.gz
-
- ┗ 📂raw_nifti
- ┃ ┣ 📂001
- ┃ ┃ ┣ 📂adc
- ┃ ┃ ┃ ┗ 📜sample_adc.gz
- ┃ ┃ ┗ 📜sample_dwi.nii.gz
- ┃ ┗ 📂002
- ┃ ┃ ┣ 📂adc
- ┃ ┃ ┃ ┣ 📂flair
- ┃ ┃ ┃ ┃ ┣ 📂sample_dwi
- ┃ ┃ ┃ ┃ ┃ ┗ 📜sub-strokecase0062_ses-0001_dwi.nii.gz
- ┃ ┃ ┃ ┃ ┗ 📜sample2_flair.nii.gz
- ┃ ┃ ┃ ┗ 📜sample2_adc.gz
- ┃ ┃ ┗ 📜sub-strokecase0062_ses-0001_dwi.nii.gz
-```
-
+![](https://github.com/DSDanielPark/EDA-NIf/blob/main/tutorials/result/data_tree.png)
 </details>
 
 <br>

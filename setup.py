@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="edanif",
-    version="0.1.6",
+    version="0.1.7",
     author="parkminwoo",
     author_email="parkminwoo1991@gmail.com",
     description="EDA-NIf creates a dataframe containing meta information of NIfTi files and provides several useful features.",

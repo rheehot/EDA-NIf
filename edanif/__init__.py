@@ -29,4 +29,4 @@ __all__ = ["count_center_voxel_labels",
            "monai_cropforeground"
             ]
 
-__version__ = "0.1.6"
+__version__ = "0.1.7"
