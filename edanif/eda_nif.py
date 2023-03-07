@@ -48,11 +48,12 @@ def meta_df(nifti_folder_path: str, include_word: str, save_path: str, is_binary
         file_name = nifti_path.split('\\')[-1].rstrip('.nii.gz')
         hdr = img.header
         raw = hdr.structarr		
-
+        hdr_info = edanif.save_print_instance(hdr)
         temp_dict['filePath'] = nifti_path
         temp_dict['volumeOfVoxel'] = f'{volume_unit}mm3'
         temp_dict['spacing'] = f'{sx}mm x {sy}mm x {sz}mm'
         temp_dict['imgAffineMetrix'] = np.round(img.affine)
+        temp_dict['imgAffineRawValue)'] = img.affine
         temp_dict['fileName'] = file_name
         temp_dict['data_dtype'] = img.get_data_dtype()
         temp_dict['niftiImgShape'] = img.shape
@@ -63,10 +64,7 @@ def meta_df(nifti_folder_path: str, include_word: str, save_path: str, is_binary
         temp_dict['3dArrayMin'] = img_array.min()
         temp_dict['3dArrayMax'] = img_array.min()
         temp_dict['isUniqueValues'] = np.unique(img_flatten_array, return_counts=True)[0]
-        # hdr_info = save_print_instance(hdr)
-        # temp_dict['img_affine_metrix(raw value)'] = img.affine
-        # temp_dict['img_affine_metrix(raw value)'] = img.affine
-        # temp_dict['hdr_info'] = hdr_info.strip("<class 'nibabel.nifti1.Nifti1Header'> object, ")
+        temp_dict['hdrInfo'] = hdr_info.strip("<class 'nibabel.nifti1.Nifti1Header'> object, ")
         if is_binary: 
             temp_dict['exceptionValueCountInBinary'] = abnormal_quadrant_count.size
             temp_dict['(quadrant_count)voxelVolumeEstimation'] = n_count(img_array) * volume_unit
