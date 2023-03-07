@@ -15,7 +15,24 @@ def count_center_voxel_labels(nifti_file_path: str, x_val: int, y_val: int, z_va
     return center_region_quadrant_count_label_count
 
 
-def meta_df(nifti_folder_path: list, include_word: str, save_path: str, is_binary: bool) -> None:
+def meta_df(nifti_folder_path: str, include_word: str, save_path: str, is_binary: bool) -> pd.DataFrame:
+    """If you enter the top-level folder path that contains the nifti files you want to obtain meta data for and keywords (such as 'nii.gz','mask.nii.gz') 
+    commonly included in those nifti files, a meta data frame is created.
+
+    :param nifti_folder_path: 
+        This is the top-level folder path that contains the nifti files you want to obtain metadata from, recursively traverse all folders.
+    :type nifti_folder_path: str
+    :param include_word: 
+        Enter keywords commonly included in nifti files (such as 'nii.gz', 'mask.nii.gz') in the parent folder path.
+    :type include_word: str
+    :param save_path: Enter the full path to the csv file to save the meta dataframe to.
+    :type save_path: str
+    :param is_binary: Enter True in case of a binary file such as a mask nifti file.
+    :type is_binary: bool
+    :return: 
+        pandas.DataFrame containing meta information and appended information of each nifti file
+    :rtype: pd.DataFrame
+    """
     total_dict = dict()
     n_count = np.count_nonzero 
     all_nifti_files = find_all_files(nifti_folder_path, include_word)
