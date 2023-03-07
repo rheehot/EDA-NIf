@@ -18,5 +18,6 @@ setuptools.setup(
         "nibabel",
         "pandas",
         "numpy",
-        "matplotlib"
+        "matplotlib",
+        "tqdm"
     ])
