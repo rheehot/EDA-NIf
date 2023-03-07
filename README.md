@@ -25,8 +25,44 @@ We provide tutorial notebooks for all the features we offer. We plan to provide 
 <br>
 
 # Main Feature
-If you enter only the top-level folder containing nifti files, you can get a data frame for all nifti files.
 
+If you enter only the top-level folder containing nifti files, you can get a data frame for all nifti files. (`edanif.eda_nif.meta_df`)
+
+1. edanif.eda_nif <br>
+  1.1 `count_center_voxel_labels` <br>
+  1.2 `meta_df`: enter only the top-level folder containing nifti files, you can get a data frame for all nifti files. <br>
+
+2. edanif.vis_nif <br>
+  2.1 `save_nifti_images` <br>
+
+3. edanif.utils.util <br>
+  3.1 `find_all_files` <br>
+  3.2 `save_print_instance`<br>
+
+4. edanif.process.preprocess <br>
+  4.1 `count_center_voxel_labels`<br>
+  4.2 `if_minus_return_0`<br>
+  4.3 `get_nonzero3d`<br>
+  4.4 `get_nonzero3d_shape` <br>
+  4.5 `get_hardcrop`<br>
+  4.6 `threshold_at_two`<br>
+  4.7 `monai_cropforeground`<br>
+  4.8 `get_nonzero_xyz_of_nii`<br>
+
+5. edanif.process.registration <br>
+  5.1 `RegistrationMetric`<br>
+
+6. edanif.process.resampling <br>
+  6.1 `make_isotropic`<br>
+  6.2 `resample_fixedsize_fixedspacing`<br>
+  6.3 `resampling`<br>
+
+7. edanif.process.trans_morph <br>
+  7.1 `voxel_erosion`<br>
+  7.2 `voxel_dilation`<br>
+  7.3 `get_boundary_diff_index`<br>
+
+- Feature development and unit testing are ongoing. We will update it whenever time permits.
 <br>
 
 # References
