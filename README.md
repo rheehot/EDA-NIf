@@ -11,7 +11,7 @@ Tool for *Exploratory Data Analysis of Neuroimaging Informatics Technology Initi
 
 # Installation
   ```cmd
-  $ pip install edanif
+  pip install edanif
   ```
 <Br>
 
